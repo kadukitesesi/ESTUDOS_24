@@ -1,0 +1,9 @@
+body{
+    display: grid;
+    place-items: center;
+}
+
+input{
+    padding: 14px;
+    margin: 10px;
+}
