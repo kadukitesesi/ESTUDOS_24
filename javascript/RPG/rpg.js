@@ -1,8 +1,9 @@
 //Dados do jogador(Nome,Pontos de Vida, Armadura)
 
-jogador1 = ["Kokori",20,20];
-
-jogador2 = ["inai",20,20];
+var jogadores_rpg = [
+    {nome : "kokori", vida : 20, armadura : 10},
+    {nome : "Inai", vida : 20, armadura : 10}
+]
 
 var escolhaJogador = document.getElementById("escolhaJogador").value;
 var escolhaDado = document.getElementById("escolhaDado").value
@@ -22,11 +23,11 @@ function girarDado(){
     }
     switch(escolha){
         case"Inai":
-            var dano = jogador2[1] - dado8
+            var dano = jogadores.rpg[0].vida - dado8
             document.getElementById("sorte").innerHTML = dano
         break
         case"Kokori":
-            var dano = dado8 - jogador1[1]
+            var dano = dado8 - jogadores_rpg[1].vida
             document.getElementById("sorte").innerHTML = dano
         break
     }
