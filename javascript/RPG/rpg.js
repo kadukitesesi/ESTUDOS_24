@@ -5,30 +5,40 @@ var jogadores_rpg = [
     {nome : "Inai", vida : 20, armadura : 10}
 ]
 
+var inimigos = [
+    {nome: "Muzan", especie: "Demonio", vida:200},
+    {nome: "Stuart", especie: "Goblin", vida:23},
+    {nome: "REX", especie:"Ogro", vida:80}
+];
+
 var escolhaJogador = document.getElementById("escolhaJogador").value;
 var escolhaDado = document.getElementById("escolhaDado").value
+var acao = document.getElementById("acaoJogador").value
+var inimigoSelect = document.getElementById("inimigos").value
+
+
 
 function girarDado(){
-
-    var dado = Math.floor(Math.random()*20);
-    document.getElementById("sorte").innerHTML = dado;
-    var dado8 = Math.floor(Math.random()*8);
-    document.getElementById("sorte").innerHTML = dado8;
-    
-
-    if(dado < 10){
-        document.getElementById("nota").innerHTML = "Você se deu mal"
-    }else{
-        document.getElementById("nota").innerHTML = "Parabéns"
-    }
-    switch(escolha){
+    switch(escolhaDado){
+        case"d20":
+             var dado = Math.floor(Math.random()*20);
+            document.getElementById("sorte").innerHTML = dado
+        break
+        case"d8":
+        var dado8 = Math.floor(Math.random()*8);
+        document.getElementById("nota").innerHTML = dado8    
+        break
+        }
+        switch(escolha){
         case"Inai":
-            var dano = jogadores.rpg[0].vida - dado8
-            document.getElementById("sorte").innerHTML = dano
+            if(acao == "ataque"){
+                var dano = inimigos[0].vida - dado
+                document.getElementById().innerHTML = inimigos[0].vida
+            }
         break
         case"Kokori":
-            var dano = dado8 - jogadores_rpg[1].vida
-            document.getElementById("sorte").innerHTML = dano
+            var dano = dado - jogadores_rpg[0].vida
+            document.getElementById().innerHTML = dano
         break
     }
 }
