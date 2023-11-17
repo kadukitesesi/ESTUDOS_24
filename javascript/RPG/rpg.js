@@ -26,25 +26,10 @@ var inimigoSelect = document.getElementById("inimigos").value;
 
 
 function girarDado(){
-    switch(escolhaDado){
-        case"d20":
-             var dado20 = Math.floor(Math.random()*dados[0].numero);
-            document.getElementById("sorte").innerHTML = dado20
-        break
-        case"d8":
-        var dado8 = Math.floor(Math.random()*dados[1].numero);
-        document.getElementById("nota").innerHTML = dado8    
-        break
-        }
-        switch(escolha){
-        case"Inai":
-            
-               // var dano = inimigos[0].vida - dado
-                document.getElementById().innerHTML = inimigos[0].vida
-        break
-        case"Kokori":
-        //    var dano = dado - jogadores_rpg[0].vida
-            document.getElementById().innerHTML = dano
-        break
-    }
+    let dados = Math.floor(Math.random()*20)
+    document.getElementById("sorte").innerText = dados
+}
+
+function ataque(){
+    
 }
