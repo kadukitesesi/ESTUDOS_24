@@ -44,6 +44,7 @@ let alternativas =  prompt(`Escolha umadas opções de consulta:
                             console.log("Não teve aumento")
                         }
                 }else{
+                    i = 22
                     alert("Finalizando tarefa...")
                 }
     
