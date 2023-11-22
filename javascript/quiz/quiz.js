@@ -15,12 +15,7 @@ arrayPerguntasRespostas = [
 ];
 
 
-function perguntaAleatoria(){
-   let perguntaNumero =  Math.floor(Math.random()*12);
-   let pergunta = arrayPerguntasRespostas[perguntaNumero].pergunta
-   return pergunta;
-};
 
+const perguntaAleatoria = arrayPerguntasRespostas.sort(()=> Math.random() - 0.5);
 
-
-alert(perguntaAleatoria())
+console.log(perguntaAleatoria)
